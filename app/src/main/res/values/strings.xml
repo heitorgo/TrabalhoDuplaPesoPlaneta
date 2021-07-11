@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TrabalhoDuplaPesoPlaneta</string>
+    <string name="mainActivityTitle">Seu peso em outros planetas!</string>
+    <string name="enabled">Habilitado</string>
+    <string name="disabled">Desabilitado</string>
+    <string name="hintWeight">Insira seu peso atual</string>
+    <string name="planetMercury">Mercúrio</string>
+    <string name="planetVenus">Vênus</string>
+    <string name="planetEarth">Terra</string>
+    <string name="planetMars">Marte</string>
+    <string name="planetJupiter">Júpiter</string>
+    <string name="planetSaturn">Saturno</string>
+    <string name="planetUranus">Urano</string>
+    <string name="planetNeptune">Netuno</string>
 </resources>
