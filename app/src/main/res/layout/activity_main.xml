@@ -12,125 +12,123 @@
     android:paddingBottom="20dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:text="@string/mainActivityTitle"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ToggleButton
-            android:id="@+id/tgbWeight"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:checked="false"
-            android:textOff="@string/disabled"
-            android:textOn="@string/enabled" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txlWeight"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtWeight"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:hint="@string/hintWeight" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/mainActivityTitle"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
-    <RadioGroup
-        android:id="@+id/rgpPlanet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/tgbWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:checked="false"
+                    android:onClick="ativarInputPeso"
+                    android:textOff="@string/disabled"
+                    android:textOn="@string/enabled" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txlWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:hint="@string/hintWeight" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rgpPlanet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/rbtMercury"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetMercury"
                     android:textColor="@color/white" />
 
                 <RadioButton
                     android:id="@+id/rbtVenus"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="true"
                     android:text="@string/planetVenus"
                     android:textColor="@color/white" />
 
                 <RadioButton
                     android:id="@+id/rbtEarth"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetEarth"
                     android:textColor="@color/white" />
 
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
                 <RadioButton
                     android:id="@+id/rbtMars"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetMars"
                     android:textColor="@color/white" />
 
                 <RadioButton
                     android:id="@+id/rbtJupiter"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetJupiter"
                     android:textColor="@color/white" />
 
                 <RadioButton
                     android:id="@+id/rbtSaturn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetSaturn"
                     android:textColor="@color/white" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/rbtUranus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetUranus"
                     android:textColor="@color/white" />
 
@@ -139,39 +137,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="false"
                     android:text="@string/planetNeptune"
                     android:textColor="@color/white" />
 
-                <RadioButton
-                    android:id="@+id/rbtIgnore"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:visibility="invisible" />
+            </RadioGroup>
 
-            </TableRow>
+            <TextView
+                android:id="@+id/lblResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible" />
 
-        </TableLayout>
+            <ImageView
+                android:id="@+id/imgPlanet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/sun" />
 
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/lblResult"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
-
-    <ImageView
-        android:id="@+id/imgPlanet"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/sun" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
